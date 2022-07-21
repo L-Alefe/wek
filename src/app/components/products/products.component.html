@@ -1,0 +1,45 @@
+<span class="title-template">Lista de Produtos</span>
+<br>
+<br>
+
+<div class="div-suave">
+  <button type="button" (click)="navigate('products-form')" class="btn btn-success margin-b">Novo Produto</button>
+<!-- Table to list products -->
+  <table class="table" *ngIf="products.length > 0; else noProducts">
+    <thead>
+      <tr>
+        <th scope="col">Descrição</th>
+        <th scope="col">Id</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of products">
+        <td>{{p.descricao}}</td>
+        <td class="text-black-50">{{p._id}}</td>
+        <td>
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false">
+              
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item cursor-pointer" (click)="navigate('products-form', p._id)">Editar</a>
+              <a class="dropdown-item cursor-pointer" (click)="exclude(p._id)">Excluir</a>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ng-template #noProducts>
+    <div class="alert alert-secondary" role="alert">
+      Nenhum item encontrado!
+    </div>
+  </ng-template>
+</div>

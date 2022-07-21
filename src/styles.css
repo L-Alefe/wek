@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.space-button {
+    margin-left: 5px;
+}
+
+.title-template {
+    font-size: 25px;
+    color: #777;
+    padding-bottom: 50px;
+}
+
+.div-suave {
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.color-white {
+    color: #fff !important;
+}
