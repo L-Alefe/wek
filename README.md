@@ -5,7 +5,7 @@ Primeiramente, você precisará instalar o bootstrap e o jquery, para carregar a
 
 Após clonar o repositório, rode o seguinte comandos do npm:
 
-    npm install bootstrap@4.1.3 jquery@3.3.1 ngx-toastr@14.3.0 --save
+    npm install bootstrap@4.1.3 jquery@3.3.1 popper.js@1.14.3 ngx-toastr@14.3.0 --save
 
 Após, abra o arquivo angular.json e substitua as propriedades "styles" e "scripts" para os valores abaixo (para adicionar os arquivos corretamente no projeto):
 
